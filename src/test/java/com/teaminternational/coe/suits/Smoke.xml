@@ -6,7 +6,7 @@
     </listeners>
     <test name="Test1" enabled="true" verbose="10">
         <classes>
-            <class name="com.teaminternational.coe.tests.example.TestExamples">
+            <class name="com.teaminternational.coe.tests.Test.Test">
             </class>
         </classes>
     </test>
