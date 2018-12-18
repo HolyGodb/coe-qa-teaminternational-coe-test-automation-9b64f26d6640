@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
- * Autocomplete Page class that emulates entering data and select value from list in autocomplete field.<br>
+ * Autocomplete com.teaminternational.coe.pages.Pages.Page class that emulates entering data and select value from list in autocomplete field.<br>
  * You can define set of locators in uiMap.properties file, for example:<br>
  * autocomplete.stateInput=".selector1"<br>
  * autocomplete.autocompleteBox=".selector2"<br>

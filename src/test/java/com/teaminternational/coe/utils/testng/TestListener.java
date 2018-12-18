@@ -40,7 +40,7 @@ public class TestListener extends TestListenerAdapter {
                         results.merge(caseId, true, (a, b) -> a & b);
                         Long issueID = Long.parseLong(caseId);
                         String id = new ZAPIManager().createExecution(ZAPIManager.prepareJsonForExecution(issueID, true));
-                        new ZAPIManager().updateExecution(ZAPIManager.prepareJsonForExecutionUpdate(id, "Test passed", issueID, results.get(caseId)), id);
+                        new ZAPIManager().updateExecution(ZAPIManager.prepareJsonForExecutionUpdate(id, "com.teaminternational.coe.tests.Test.Test passed", issueID, results.get(caseId)), id);
                     } catch (UnsupportedEncodingException | NullPointerException e) {
                         e.printStackTrace();
                     }
@@ -64,7 +64,7 @@ public class TestListener extends TestListenerAdapter {
                         results.merge(caseId, false, (a, b) -> a & b);
                         Long issueID = Long.parseLong(caseId);
                         String id = new ZAPIManager().createExecution(ZAPIManager.prepareJsonForExecution(issueID, false));
-                        new ZAPIManager().updateExecution(ZAPIManager.prepareJsonForExecutionUpdate(id, "Test failed: "+result.getThrowable().getMessage() + " " + result.getThrowable().getCause(), issueID, results.get(caseId)), id);
+                        new ZAPIManager().updateExecution(ZAPIManager.prepareJsonForExecutionUpdate(id, "com.teaminternational.coe.tests.Test.Test failed: "+result.getThrowable().getMessage() + " " + result.getThrowable().getCause(), issueID, results.get(caseId)), id);
                         String attachmentID = new ZAPIManager().attachScreenshot(issueID, id);
                     } catch (UnsupportedEncodingException | NullPointerException e) {
                         e.printStackTrace();

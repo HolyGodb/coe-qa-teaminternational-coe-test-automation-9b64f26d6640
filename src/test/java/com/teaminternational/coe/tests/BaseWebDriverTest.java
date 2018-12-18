@@ -144,7 +144,7 @@ public class BaseWebDriverTest {
      * Verify on Javascript errors in webdriver logs, in closing webdriver and in saving report logs.
      *
      * @param testContext test context with information about test run
-     * @param result Test method result
+     * @param result com.teaminternational.coe.tests.Test.Test method result
      */
     @AfterMethod()
     public void afterMethod(final ITestContext testContext, ITestResult result) {

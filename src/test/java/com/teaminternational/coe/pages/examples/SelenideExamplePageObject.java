@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import com.teaminternational.coe.pages.HomePage;
 
 /**
- * Example of Page class that uses some SelenideElement methods.
+ * Example of com.teaminternational.coe.pages.Pages.Page class that uses some SelenideElement methods.
  *
  * @author Vladyslav.Yegorov@teaminternational.com
  * @version 1.0 01/10/18

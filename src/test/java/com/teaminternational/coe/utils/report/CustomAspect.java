@@ -129,7 +129,7 @@ public class CustomAspect {
                     .withStatus(getStatus(e).orElse(Status.BROKEN))
                     .withStatusDetails(getStatusDetails(e).orElse(null)));
             getLifecycle().addAttachment("Screenshot", "image/png", "png", commonHelper.getScreenshotBytes());
-            getLifecycle().addAttachment("Page source", "text/html", "html", commonHelper.getPageSourceBytes());
+            getLifecycle().addAttachment("com.teaminternational.coe.pages.Pages.Page source", "text/html", "html", commonHelper.getPageSourceBytes());
             throw e;
         } finally {
             getLifecycle().stopStep(uuid);

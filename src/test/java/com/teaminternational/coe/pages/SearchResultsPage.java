@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$;
 
 /**
- * Search Results Page class that emulates collections of elements with results of search on the page.<br>
+ * Search Results com.teaminternational.coe.pages.Pages.Page class that emulates collections of elements with results of search on the page.<br>
  * A subclass of HomePage with additional methods for testing Search Results.
  * You can define set of locators in uiMap.properties file, for example:<br>
  * searchresults.results=".selector1"<br>

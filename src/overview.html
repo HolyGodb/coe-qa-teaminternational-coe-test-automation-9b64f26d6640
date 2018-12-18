@@ -26,7 +26,7 @@ Framework achieves this goal by organizing flexible and well documented classes 
         <li>Framework code on Java. Can be found in repository (see <a href="#installation">Installation</a> section).</li>
         <li>Framework documentation. Can be found at the moment at <a href="https://coe-qa.github.io">https://coe-qa.github.io</a></li>
         <li>Examples of framework's usage in code on Java. Can be found in repository (see <a href="#installation">Installation</a> section).</li>
-        <li>Test application used for test examples. Can be found at the moment at <a href="https://coe-qa.github.io">https://coe-qa.github.io</a></li>
+        <li>com.teaminternational.coe.tests.Test.Test application used for test examples. Can be found at the moment at <a href="https://coe-qa.github.io">https://coe-qa.github.io</a></li>
     </ul>
 <h2>Tutorial.</h2>
     <a name="installation">
@@ -54,7 +54,7 @@ Below you can see the list of files with properties and description of each prop
     <li>
         <b>gradle.properties:</b>
         <ul>
-            <li><i>suit</i> - path to Test Suit xml configuration file</li>
+            <li><i>suit</i> - path to com.teaminternational.coe.tests.Test.Test Suit xml configuration file</li>
             <li><i>gridHubUrl</i> - path to selenium grid server , used if browser set to 'grid'</li>
             <li><i>networkFileDir</i> - network path for upload/download files (not used in this version)</li>
             <li><i>reportlocation</i> - path for saving reports and screenshots</li>
@@ -74,7 +74,7 @@ Below you can see the list of files with properties and description of each prop
             <li><i>snapshot.directory</i> - directory for saving screenshots (not used in this version)</li>
             <li><i>cookie.lifetime</i> - expiration of cookies in seconds (not used in this version)</li>
             <li><i>test.timeout</i> - timeout for execution of one test in minutes</li>
-            <li><i>frameworktest_baseurl</i> - URL for Test Examples application</li>
+            <li><i>frameworktest_baseurl</i> - URL for com.teaminternational.coe.tests.Test.Test Examples application</li>
             <li><i>zephyrBaseURL</i> - URL for Zephyr API gate. It can be found in ZAPI documentation. At the moment it's https://prod-api.zephyr4jiracloud.com/connect .</li>
             <li><i>secretKey</i> - secret access key for Zephyr API. Can be found in JIRA Dashboard in JIRA Settings->Apps->ZAPI.<br> <img src="./../img/img01.PNG"/></li>
             <li><i>zapiAccessKey</i> - shared access key for Zephyr API. Can be found in JIRA Dashboard in JIRA Settings->Apps->ZAPI.</li>
@@ -84,7 +84,7 @@ Below you can see the list of files with properties and description of each prop
             <li><i>cycleId</i> - ID of current cycle of testing in JIRA Cloud. Before looking for cycle ID you must create all test cases in JIRA Project as issues with type "test" (see image below).<br>
                 <img src="./../img/img03.PNG"/>
                 <br>
-                After this you should use ID of issue in @TmsLink annotation for your method that annotated also as @Test. To find ID of issue go to "Tests" in JIRA Dashboard in the project management.
+                After this you should use ID of issue in @TmsLink annotation for your method that annotated also as @com.teaminternational.coe.tests.Test.Test. To find ID of issue go to "Tests" in JIRA Dashboard in the project management.
                 And select version to which you assigned this issue. Find your test in the list and on "Edit" in last column dropdown menu click right button and select "Open in new window" in context menu. In opened window you will see in URL
                 as parameter "id". See screenshot below.<br>
                 <img src="./../img/img05.PNG"/>
@@ -125,12 +125,12 @@ Below you can see the list of files with properties and description of each prop
         <b>src/test/resources/META-INF/aop.xml: configuration XML for AspectJ</b>
     </li>
     <li>
-        <b>src/test/java/com/teaminternational/coe/suits/Smoke.xml: configuration XML for Test Examples test suite. Use it as example for your TestSuites.</b>
+        <b>src/test/java/com/teaminternational/coe/suits/Smoke.xml: configuration XML for com.teaminternational.coe.tests.Test.Test Examples test suite. Use it as example for your TestSuites.</b>
     </li>
 </ul>
 </p>
 <h3>3. Writing tests.</h3>
-<p>In the framework we provided Example Test Suit. It's a simple testsuite with one single Class (com.teaminternational.coe.tests.example.TestExamples) with tests
+<p>In the framework we provided Example com.teaminternational.coe.tests.Test.Test Suit. It's a simple testsuite with one single Class (com.teaminternational.coe.tests.example.TestExamples) with tests
 and described in XML file (src/test/java/com/teaminternational/coe/suits/Smoke.xml). You can copy this XML and class file, replace path to XML in config and replaces
 tests in your Class with tests.
 </p>

@@ -1,11 +1,13 @@
+package com.teaminternational.coe.pages.Pages;
+
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
-    SelenideElement loginPageUsername = $("[data-test=username]");
-    SelenideElement loginPagePassword = $("[data-test=password]");
-    SelenideElement loginPageSubmitButton = $(".login-button");
+    public SelenideElement loginPageUsername = $("[data-test=username]"),
+    loginPagePassword = $("[data-test=password]"),
+    loginPageSubmitButton = $(".login-button");
 
     public void loginMethod(String username, String password) {
         loginPageUsername.setValue(username);

@@ -91,7 +91,7 @@ public class TestExamples extends BaseCustomTest {
 
     /**
      * Example of test method.
-     * Demonstrates usage of GooglePage PageObject and SearchResults Page Object and his methods
+     * Demonstrates usage of GooglePage PageObject and SearchResults com.teaminternational.coe.pages.Pages.Page Object and his methods
      */
     @Test
     public void userCanSearch() {
@@ -107,7 +107,7 @@ public class TestExamples extends BaseCustomTest {
 
     /**
      * Example of test method.
-     * Demonstrates usage of GooglePage PageObject and SearchResults Page Object and his methods
+     * Demonstrates usage of GooglePage PageObject and SearchResults com.teaminternational.coe.pages.Pages.Page Object and his methods
      */
     @Test
     public void userCanSearch2() {
@@ -226,7 +226,7 @@ public class TestExamples extends BaseCustomTest {
 
         // all these should-s are the same, variants are for language semantics
         $("h1").shouldBe(visible);
-        $("h1").shouldHave(text("Test"));
+        $("h1").shouldHave(text("com.teaminternational.coe.tests.Test.Test"));
         $("h1").should(appear);
 
 
@@ -255,14 +255,14 @@ public class TestExamples extends BaseCustomTest {
 
         //chainable
         $("h1").shouldBe(visible)
-                .shouldHave(text("Test"))
+                .shouldHave(text("com.teaminternational.coe.tests.Test.Test"))
                 .should(appear);
 
         // >1 conditions
-        $("h1").shouldHave(text("Test"), cssClass("docs-logotype"));
+        $("h1").shouldHave(text("com.teaminternational.coe.tests.Test.Test"), cssClass("docs-logotype"));
 
         // is, be, not combined
-        $("h1").should(be(visible), have(text("Test")), not(be(hidden)));
+        $("h1").should(be(visible), have(text("com.teaminternational.coe.tests.Test.Test")), not(be(hidden)));
 
         // or, and (why do you need them in tests?)
         $("h1").shouldBe(or("to be or not to be visible", visible, hidden));
@@ -302,7 +302,7 @@ public class TestExamples extends BaseCustomTest {
         $("h1").shouldHave(text("TES")); //case insensitive, partial match
         $("h1").shouldHave(textCaseSensitive("Tes")); //case sensitive, partial match
         $("h1").shouldHave(exactText("coe TEST Automation")); //case insensitive, exact match
-        $("h1").shouldHave(exactTextCaseSensitive("COE Test Automatoin")); //case sensitive, exact match
+        $("h1").shouldHave(exactTextCaseSensitive("COE com.teaminternational.coe.tests.Test.Test Automatoin")); //case sensitive, exact match
         $("h1").should(matchText("[A..Z]est")); //regexp
     }
 
@@ -699,7 +699,7 @@ public class TestExamples extends BaseCustomTest {
     @Test
     public void useByJQuerySuccess() {
         open(frameworktest_baseurl);
-        $(new ByJquery(".navbar-brand.v-link-active")).shouldHave(text("Sample App")).shouldHave(text("Test Automatoin"));
+        $(new ByJquery(".navbar-brand.v-link-active")).shouldHave(text("Sample App")).shouldHave(text("com.teaminternational.coe.tests.Test.Test Automatoin"));
     }
     /**
      * Example of test method.
@@ -769,7 +769,7 @@ public class TestExamples extends BaseCustomTest {
     /**
      * Example of test method.
      * Demonstrates usage of dismiss()
-     * Also demonstrates usage of ZAPI for connecting test with JIRA Test.
+     * Also demonstrates usage of ZAPI for connecting test with JIRA com.teaminternational.coe.tests.Test.Test.
      * TmsLink must be ID of test in JIRA. Should look like "10000" or "10001", etc. Can be found in
      *
      * @see TmsLink

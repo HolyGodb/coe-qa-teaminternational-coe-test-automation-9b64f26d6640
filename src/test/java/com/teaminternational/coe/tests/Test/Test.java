@@ -1,5 +1,11 @@
+package com.teaminternational.coe.tests.Test;
+
 import com.codeborne.selenide.Condition;
-//import com.github.javafaker.Faker;
+import com.teaminternational.coe.pages.Pages.CartPage;
+import com.teaminternational.coe.pages.Pages.InventoryPage;
+import com.teaminternational.coe.pages.Pages.LoginPage;
+import com.teaminternational.coe.pages.Pages.Page;
+import com.teaminternational.coe.tests.BaseCustomTest;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -9,10 +15,8 @@ import org.testng.annotations.DataProvider;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class Test {
+public class Test extends BaseCustomTest {
 
-    //private WebDriver driver;
-    //private Wait<WebDriver> wait;
     @DataProvider
     public static Object[][] CredentialsWithAllData() {
         return new Object[][]{
